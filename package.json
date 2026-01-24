@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "在线工具集合网站 - JSON格式化、SQL格式化、时间戳转换、Unicode编码解码",
   "type": "module",
+  "engines": {
+    "node": ">=18.18.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

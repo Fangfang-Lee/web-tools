@@ -1,5 +1,19 @@
 import { format } from 'sql-formatter';
 import type { SqlFormatterOptions } from './types';
+import type { SqlDialect } from '@/utils/constants';
+
+function toSqlFormatterLanguage(dialect: SqlDialect) {
+  switch (dialect) {
+    case 'mssql':
+      return 'tsql';
+    case 'oracle':
+      return 'plsql';
+    case 'sql':
+      return 'sql';
+    default:
+      return dialect;
+  }
+}
 
 /**
  * 格式化SQL
@@ -14,7 +28,7 @@ export function formatSql(sqlString: string, options: SqlFormatterOptions): stri
 
   try {
     const formatted = format(sqlString, {
-      language: options.dialect === 'sql' ? undefined : options.dialect,
+      language: toSqlFormatterLanguage(options.dialect),
       keywordCase: options.keywordCase === 'upper' ? 'upper' : 'lower',
       indentStyle: 'standard',
       tabWidth: options.indent,
