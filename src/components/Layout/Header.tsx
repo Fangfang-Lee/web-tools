@@ -7,6 +7,7 @@ const navItems = [
   { path: '/sql', label: 'SQL工具' },
   { path: '/timestamp', label: '时间戳转换' },
   { path: '/unicode', label: 'Unicode工具' },
+  { path: '/charcounter', label: '字符计数' },
 ];
 
 export const Header: React.FC = () => {

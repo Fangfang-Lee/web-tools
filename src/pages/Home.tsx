@@ -26,6 +26,12 @@ const tools = [
     description: 'Unicode字符与编码之间的相互转换',
     icon: '🔤',
   },
+  {
+    path: '/charcounter',
+    title: '字符计数',
+    description: '计算文本中的字符数量，支持中英文、数字、空格统计',
+    icon: '📝',
+  },
 ];
 
 export const Home: React.FC = () => {

@@ -16,6 +16,9 @@ const TimestampConverter = lazy(() =>
 const UnicodeConverter = lazy(() =>
   import('./pages/UnicodeConverter').then((module) => ({ default: module.UnicodeConverter }))
 );
+const CharCounter = lazy(() =>
+  import('./pages/CharCounter').then((module) => ({ default: module.CharCounter }))
+);
 
 const Loading = () => (
   <div className="flex items-center justify-center min-h-[400px]">
@@ -34,6 +37,7 @@ function App() {
             <Route path="/sql" element={<SqlFormatter />} />
             <Route path="/timestamp" element={<TimestampConverter />} />
             <Route path="/unicode" element={<UnicodeConverter />} />
+            <Route path="/charcounter" element={<CharCounter />} />
           </Routes>
         </Suspense>
       </Layout>
