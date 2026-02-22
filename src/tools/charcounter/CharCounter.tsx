@@ -29,7 +29,7 @@ export const CharCounter: React.FC = () => {
 
     chars.forEach((char) => {
       // 中文字符
-      if (/\u4e00-\u9fff/.test(char)) {
+      if (/[\u4e00-\u9fff]/.test(char)) {
         chinese++;
       }
       // 英文字母
