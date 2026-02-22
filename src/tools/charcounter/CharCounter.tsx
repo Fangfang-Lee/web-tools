@@ -33,16 +33,16 @@ export const CharCounter: React.FC = () => {
         chinese++;
       }
       // 英文字母
-      else if (/[a-zA-Z]/.test(char)) {
+      if (/[a-zA-Z]/.test(char)) {
         letters++;
         english++;
       }
       // 数字
-      else if (/[0-9]/.test(char)) {
+      if (/[0-9]/.test(char)) {
         numbers++;
       }
       // 空格
-      else if (/\s/.test(char)) {
+      if (/\s/.test(char)) {
         spaces++;
       }
     });
