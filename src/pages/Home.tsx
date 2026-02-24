@@ -32,6 +32,12 @@ const tools = [
     description: '计算文本中的字符数量，支持中英文、数字、空格统计',
     icon: '📝',
   },
+  {
+    path: '/markdown',
+    title: 'Markdown 编辑器',
+    description: '在线 Markdown 编辑器，支持实时预览和 GFM 语法',
+    icon: '📄',
+  },
 ];
 
 export const Home: React.FC = () => {

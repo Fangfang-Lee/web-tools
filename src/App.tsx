@@ -19,6 +19,9 @@ const UnicodeConverter = lazy(() =>
 const CharCounter = lazy(() =>
   import('./pages/CharCounter').then((module) => ({ default: module.CharCounter }))
 );
+const MarkdownEditor = lazy(() =>
+  import('./pages/MarkdownEditor').then((module) => ({ default: module.MarkdownEditor }))
+);
 
 const Loading = () => (
   <div className="flex items-center justify-center min-h-[400px]">
@@ -38,6 +41,7 @@ function App() {
             <Route path="/timestamp" element={<TimestampConverter />} />
             <Route path="/unicode" element={<UnicodeConverter />} />
             <Route path="/charcounter" element={<CharCounter />} />
+            <Route path="/markdown" element={<MarkdownEditor />} />
           </Routes>
         </Suspense>
       </Layout>
